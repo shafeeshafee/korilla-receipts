@@ -10,6 +10,14 @@ const Receipt = ({person, ...data}) => {
                 <li><span class="receipt-titles">Rice:</span> {data.order.rice}</li>
                 <li><span class="receipt-titles">Sauce:</span> {data.order.sauce}</li>
                 <li><span class="receipt-titles">Drink:</span> {data.order.drink}</li>
+
+                <li><span class="receipt-titles">Toppings:</span>
+                    {data.order.toppings.map((item, index) => {
+                        return ` ${index + 1}\n: ${item} `;
+                    })}
+                    
+                    </li>
+
                 <li class="cost"><span class="receipt-titles cost">Cost:</span>$ <span class="cost-amount"> {data.order.cost}</span></li>
             </ul>
         </div>
