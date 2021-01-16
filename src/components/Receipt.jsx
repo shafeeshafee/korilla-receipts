@@ -1,9 +1,6 @@
 import "./Receipt.css"
 
 const Receipt = ({person, ...data}) => {
-    const { sauce, main, protein, rice, cost, drink } = data;
-
-    console.log(data);
     return (
         <div className="receipt-container">
             <h3>Receipt for: {(person).toUpperCase()}</h3>
